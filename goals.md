@@ -1,0 +1,3 @@
+# Goals
+
+- Automation when possible.
