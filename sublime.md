@@ -18,6 +18,8 @@ Add Sublime Text CLI
 sudo mkdir -p "/usr/local/bin/" && ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/subl"
 ```
 
+## [Batch install your packages?](https://github.com/mrmartineau/SublimeTextSetup/issues/3)
+
 ## Resources
 
 Install Soda Theme
@@ -31,8 +33,3 @@ Install Tomorrow Theme
 ```bash
 git clone git://github.com/chriskempson/textmate-tomorrow-theme.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Tomorrow
 ```
-
-Settings
---------
-
-...

@@ -13,9 +13,6 @@ In any of these scenarios, it's very common for people to do something along the
 - Download applications as they remember what apps they used to have.
 - Setup command line tools willy-nilly, unless they had maintained some [.dotfiles](http://dotfiles.github.io/).
 
-
-- - -
-
 # The Goods
 
 ## Download Applications

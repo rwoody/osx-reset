@@ -1,0 +1,114 @@
+#XCode
+1)  Download XCode from Appstore
+2)  Go to XCode preferences, and install the commandline tools
+
+# Your console
+1)  Install Iterm2 
+    http://www.iterm2.com (from now on user iterm2 for the console commands)
+2)  Install Oh My ZSH (nice colors) 
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+#Homebrew
+1)  Install homebrew
+    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+2)  brew doctor
+
+#Rbenv (Ruby versioning)
+1)  brew update
+2)  brew install rbenv
+3)  brew install ruby-build
+4)  install latest ruby 
+    rbenv install 2.0.0-p195
+5)  use latest ruby in all new projects: 
+    rbenv global 2.0.0-p195
+6)  rbenv rehash (must be done after each new ruby install)
+7)  Fix zsh issue not finding correct ruby version:
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv
+    echo 'eval "$(rbenv init -)"' >> ~/.zshenv
+    echo 'source $HOME/.zshenv' >> ~/.zshrc
+    exec $SHELL
+
+# Rails
+1) To speed up gem installations, you can skip downloading documents. Create or edit ~/.gemrc with:
+install: --no-rdoc --no-ri 
+update:  --no-rdoc --no-ri
+2) gem install rails bundler
+
+# Server
+1)  Install pow 
+    curl get.pow.cx | sh
+2)  gem install powder
+3)  Adjust powcfg to use the ruby version set by rbenv
+    edit ~/powconfig
+    export HOME=/Users/[YOUR USERNAME]
+    export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+
+# Database
+- Postgress
+1) Download postgress app. Move it to applications. Run it, and rightclick icon -> uncheck show documentation on startup, check startup on login
+2)  Adding a default admin for db
+    rightclick the app -> open psql
+    CREATE ROLE postgres;
+    ALTER ROLE postgres SUPERUSER;
+    (for some reason, CREATE ROLE postgres SUPERUSER; does not work)
+3) Add to your ~/.zsrc
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+- Redis
+1) brew install redis
+2) add to startup:  ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+3) start now!: launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+
+# Git - Code versioning
+1)  Download git 
+    http://git-scm.com/download/mac
+2)  Generate SSH key and add to github
+    cd ~/.ssh
+    ssh-keygen -t rsa -C "your_email@example.com"
+    follow instructions
+    clip < ~/.ssh/id_rsa.pub
+    Go to your github account settings (https://github.com/settings/ssh)
+    Paste the SSH key
+
+3)  Set global username and email
+    git config --global user.email "me@here.com"
+    git config --global user.username "me"
+
+4)  Set global gitignore
+    vim ~/.gitignore_global
+    press o
+    paste the code from https://help.github.com/articles/ignoring-files
+    press esc then :w then :q
+    git config --global core.excludesfile ~/.gitignore_global
+
+# Heroku (Optional, if you use Heroku's services ofcourse)
+1)  Install Heroku toolbelt
+    https://toolbelt.heroku.com/
+2)  heroku login
+3)  heroku keys:add
+
+# SublimeText (Optional text editor)
+1)  Download sublime text
+    http://www.sublimetext.com/2
+2)  add subl alias
+    alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+    alias nano="subl"
+    export EDITOR="subl"
+3) Install sublime package manager
+   open sublime text
+    press CTRL + ` 
+paste this:
+    import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
+
+4) install coffeescript, bettersidebar, scss syntax and sass syntax
+    press CMD + SHIFT + P
+    type: install package
+    type in the name of the package you want to install
+5) adjust Preferences -> User Settings
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "highlight_modified_tabs": true,
+
+# Other stuff
+1) brew install imagemagick
+2) brew install wget
