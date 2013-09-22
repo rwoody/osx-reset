@@ -1,11 +1,7 @@
-# osx-dev-install
-
-A smart way to get your new OSX development machine up and running.
-
-This project makes that easier.
+# osx-reset
 
 ## Why?
-- **You constantly screw things up.** You are a learner and/or hacker. [Debugging](http://lmgtfy.com/) always sucks. Just ``reset --hard HEAD`` instead.
+- **You constantly screw things up.** You are a learner and/or hacker. [Debugging](http://lmgtfy.com/) an OS always sucks. Just ``reset --hard HEAD`` instead.
 - **Your computer was just stolen.** You just need to get up and running -- you're not a *(necessarily)* quitter.
 
 In any of these scenarios, it's very common for people to do something along these lines, in no specific order:
@@ -16,6 +12,8 @@ In any of these scenarios, it's very common for people to do something along the
 # The Goods
 
 ## Download Applications
+
+Looking for some automation here. The App Store sucks and doesn't cover all your bases.
 
 ### Free
 
@@ -44,7 +42,8 @@ In any of these scenarios, it's very common for people to do something along the
 
 `Xcode > Preferences > Downloads > Command Line Tools`
 
-*Screw Xcode!* Install GCC and/or other necessary tools as you see fit with [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer) [1](http://kennethreitz.org/xcode-gcc-and-homebrew/)
+*Screw Xcode!* Install GCC [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer) [1](http://kennethreitz.org/xcode-gcc-and-homebrew/)
+* You'll most likely end up installing Xcode for the Command Line Tools, so just get it over with now.
 
 ## Install Homebrew
 
@@ -57,7 +56,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ### Git
 
 ```bash
-ssh-keygen -t rsa -C "g3dinua@gmail.com"
+ssh-keygen -t rsa -C "me@gmail.com"
 
 #copy ssh key to github.com
 subl ~/.ssh/id_rsa.pub
@@ -66,10 +65,10 @@ subl ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 
 #set git config values
-git config --global user.name "Bohdan Viter"
-git config --global user.email "g3dinua@gmail.com"
-git config --global github.user g3d
-git config --global github.token your_token_here
+git config --global user.name "OSX Reset"
+git config --global user.email "reset@apple.com"
+git config --global github.user osx-reset
+git config --global github.token SUPER_SECRET
 
 git config --global core.editor "subl3 -n -w"
 git config --global color.ui true
@@ -77,19 +76,21 @@ git config --global color.ui true
 
 ### .dotfiles
 
-Clone and install your `.dotfiles` from Github to `~/`
+Clone and install your `.dotfiles` from Github
 
-### Node Version Manager ([nvm](https://github.com/creationix/nvm#install-script))
+### NVM: Node Version Manager ([site](https://github.com/creationix/nvm#install-script))
 ```bash
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
-### Ruby Version Manager ([rvm](https://rvm.io/))
+### RVM: Ruby Version Manager ([site](https://rvm.io/))
 ```bash
 curl -L https://get.rvm.io | bash -s stable
 ```
 
 ## OS X Preferences
+
+Try running the executable `bin/hack.sh` which will guide you through some hidden OSX preferences that are **pretty handy**.
 
 ### *More @ OSX.md*
 
@@ -132,15 +133,8 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 - - -
 
-
-
-```bash
-brew install git ack wget curl memcached libmemcached readline sqlite gdbm pkg-config
-```
-
-
 ## Python
-------------
+
 1. Install with Homebrew
 ```bash
 brew install python --framework
