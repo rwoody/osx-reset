@@ -1,3 +1,1 @@
 # Goals
-
-- Automation when possible.
