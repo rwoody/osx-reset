@@ -91,6 +91,8 @@ curl -L https://get.rvm.io | bash -s stable
 
 ## OS X Preferences
 
+### *More @ OSX.md*
+
 ```bash
 ### Disable window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -128,8 +130,7 @@ chflags nohidden ~/Library
 ### Big save menu always
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-
-
+- - -
 
 
 
