@@ -51,6 +51,8 @@ Looking for some automation here. The App Store sucks and doesn't cover all your
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
+[See also](https://github.com/phinze/homebrew-cask).
+
 ## Shell Stuff
 
 ### Git
