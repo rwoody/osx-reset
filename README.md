@@ -14,6 +14,7 @@ In any of these scenarios, it's very common for people to do something along the
 ## Download Applications
 
 Looking for some automation here. The App Store sucks and doesn't cover all your bases.
+* http://getmacapps.com/
 
 ### Free
 
