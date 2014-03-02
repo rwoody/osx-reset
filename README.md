@@ -30,7 +30,7 @@ Looking for some automation here. The App Store sucks and doesn't cover all your
 * [LiveReload Extensions](http://help.livereload.com/kb/general-use/browser-extensions)
 * [Sequel Pro](http://www.sequelpro.com/)
 * [Robomongo]
-* [Viscosity - VPN](http://www.sparklabs.com/viscosity/download/)
+* [TinkerTool](http://www.bresink.com/osx/TinkerTool.html)
 
 ### Paid
 * [1Password](https://agilebits.com/onepassword)
