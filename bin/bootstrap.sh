@@ -261,6 +261,7 @@ if ask "Move Dock on the Right" Y; then
   defaults write com.apple.dock orientation -string "right"
 fi
 
+# @Todo: research if this is still necessary
 if ask "Enable AirDrop over Ethernet and on unsupported Macs running Lion" Y; then
   defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 fi
